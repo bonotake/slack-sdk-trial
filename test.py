@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/good', methods=['POST'])
 def good():
-    data = request.get_data()
+    data = request.get_data().decode(encoding='utf-8')
     print(data)
     return data
 
